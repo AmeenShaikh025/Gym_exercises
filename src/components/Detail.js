@@ -23,7 +23,6 @@ const Detail = ( { exerciseDetail } ) => {
     }
   ]
 
-
   return (
     <Stack gap="60px" sx={{flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center'}}>
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
@@ -37,8 +36,8 @@ const Detail = ( { exerciseDetail } ) => {
           exercise to target your {target}. It will help your mood and gain energy.
 
         </Typography>
-        {extraDetail.map((item) => (
-          <Stack key={item.name} direction="row" gap="24px" alignItems="center">
+        {extraDetail.map((item,id) => (
+          <Stack key={id} direction="row" gap="24px" alignItems="center">
             <Button sx={{ background: '#fff2db', borderRadius: '50%', width: '100px', height: '100px' }}>
               <img src={item.icon} alt={bodyPart} style={{ width: '50px', height: '50px' }} />
             </Button>
